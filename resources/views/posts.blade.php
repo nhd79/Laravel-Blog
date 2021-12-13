@@ -11,17 +11,19 @@
 
 <body>
     <!-- <h1>My Blog</h1> -->
-    <?php foreach ($posts as $post) : ?>
-        <article>
+    @foreach ($posts as $post)
+        {{-- @dd($loop) --}}
+        <article class="{{ $loop->even ? 'even' : '' }}">
             <h1>
-                <a href="/posts/<?= $post->slug; ?>">
-                    {{$post->title}}
+                <a href="/posts/{{ $post->slug }}">
+                    {{ $post->title }}
                 </a>
             </h1>
-
-            <div><?= $post->excerpt; ?></div>
+            <div>
+                {{ $post->excerpt }}
+            </div>
         </article>
-    <?php endforeach; ?>
+    @endforeach
 </body>
 
 </html>
