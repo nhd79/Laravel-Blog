@@ -21,4 +21,9 @@ class PostController extends Controller
             'post' => $post
         ]);
     }
+
+    // 7 restful method
+    // GET, NEW, SHOW, POST, EDIT, PUT, DELETE
+    // 7 restful action (Laravel)
+    // index, create, show, store, edit, update, destroy
 }
