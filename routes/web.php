@@ -14,12 +14,10 @@ Route::get('ping', function () {
         'server' => 'us20'
     ]);
 
-    // $response = $mailchimp->lists->addListMember('cb1bc0a18a', [
-    //     'email_address' => 'hoangduy7919@gmail.com',
-    //     'status' => 'subscribed'
-    // ]);
-
-    $response = $mailchimp->ping->get();
+    $response = $mailchimp->lists->addListMember('d06318b16d', [
+        'email_address' => 'hoangduy79199@gmail.com',
+        'status' => 'subscribed'
+    ]);
 
     ddd($response);
 });
